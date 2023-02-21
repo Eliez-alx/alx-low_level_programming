@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - Print _putchar
+ * written by me
  * Return: 0
  */
 
