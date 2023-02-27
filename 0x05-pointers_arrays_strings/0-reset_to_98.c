@@ -1,1 +1,11 @@
-1-swap.c 2-strlen.c 3-puts.c 4-print_rev.c 5-rev_string.c 6-puts2.c 7-puts_half.c 8-print_array.c 9-strcpy.c
+#include "main.h"
+/**
+ * reset_to_98 - takes pointer to int as parameter
+ *  and updates value it points to to 98
+ *  @n: input
+ *  Return: n
+ */
+void reset_to_98(int *n)
+{
+	*n = 98;
+}
