@@ -1,27 +1,32 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * _strstr - finds the first occurrence of the
- * substring needle in the string haystack
- * The terminating null bytes (\0) are not compared
- * @needle: input
- * @haystack: input
+ * _strstr - Finds substring
+ * @needle:string to be find
+ * @haystack: string to be searched
  * Return: Always 0 (Success)
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	for (; *haystack != '\0'; haystack++)
-	{
-		char *l = haystack++;
-		char *p = needle;
+	int a = 0, b = 0;
 
-		while (*l == *p && *p != '\0')
+	while (haystack[a])
+	{
+	while (needle[b])
+	{
+		if (haystack[a + b] != needle[b])
 		{
-			l++;
-			p++;
+			break;
 		}
-		if (*p == '\0')
-			return (haystack);
+		b++;
 	}
-	return (0);
+	if (needle[b] == '\0')
+	{
+		return (haystack + a);
+	}
+	a++;
+	}
+	return ('\0');
 }
